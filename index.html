@@ -1,1 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苹屋特後探太都测王排品附有限公司 - 正定特後物㊂育</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght$300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 丹毑字体－类似当明深右字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+Qing+Ke+HuangYou&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <style>
+        /* 方形＊改形立形卡式式）*/
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .features .feature {
+            flex: 1;
+            min-width: 240px;
+            max-width: 280px;
+            background: white;
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 260px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 添加美偟的闺乘属时高组（为安收组属组）*/
+        .features .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #e74c3c, #f39c12);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .features .feature:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(231, 76, 60, 0.15);
+            border-color: #e74c3c;
+        }
+        
+        .features .feature:hover::before {
+            opacity: 1;
+        }
+        
+        .features .feature i {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffeaea, #fff5f5);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .features .feature:hover i {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #e74c3c, #f39c12);
+            color: white;
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+        }
+        
+        .features .feature h4 {
+            font-size: 1.4rem;
+            margin: 15px 0 10px;
+            color: #2c3e50;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .features .feature p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0 10px;
+        }
+        
+        /* 确保四个项目等等等间间间间间间间间间间间 */
+        @media (min-width: 1200px) {
+            .features .feature {
+                flex: 0 0 calc(25% - 25px);
+                max-width: calc(25% - 25px);
+            }
+        }
+        
+        @media (max-width: 1199px) and (min-width: 768px) {
+            .features {
+                gap: 20px;
+            }
+            .features .feature {
+                flex: 0 0 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+                height: 240px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .features {
+                gap: 15px;
+            }
+            .features .feature {
+                flex: 0 0 100%;
+                max-width: 100%;
+                height: auto;
+                min-height: 200px;
+            }
+        }
 
+       /* 移除之前的features-row式弿 */
+        .features-row {
+            display: none;
+        }
+        
+        /* logo型式式图特图特�o�
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            height: 60px; /* 图定覬體，与調自台反配 */
+        }
+        
+        .logo-img {
+            height: 50px; /* 图片ꥬ體 */
+            width: auto;  /* 宽帮芧叚对札 */
+            max-width: 200px; /* 最大彻庎限制 */
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+        
+        /* 当前你用无字台v2（图特未下台无效无字体）*/
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            background: linear-gradient(135deg, #fff5f5, #ffeaea);
+            border-radius: 10px;
+            border: 2px solid #e74c3c;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover .logo-placeholder {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(231, 76, 60, 0.3);
+            background: linear-gradient(135deg, #ffeaea, #ffd6d6);
+        }
+        
+        .logo-text {
+            color: #e74c3c !important;
+            font-weight: 800;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .logo:hover .logo-text {
+            color: #c0392b !important;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* 添加法入单兇格叿＊ */
+        .logo-text::after {
+            content: '® ;
+            font-size: 1rem;
+            vertical-align: super;
+            margin-left: 3px;
+            color: #e74c3c;
+        }
+        
+        /* 当图留并坏存在时化字字logo */
+        .logo:has(img) .logo-placeholder {
+            display: none;
+        }
+        
+        /* 产品描述格式/式弌是服受*/
+        .product-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .product-info ul li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            line-height: 1.6;
+        }
+        
+        .product-info ul li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .product-info ul li strong {
+            color: #e74c3c;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .product-info ul li br {
+            display: block;
+            margin: 5px 0;
+            content: "";
+        }
+        
+        /* 祢夌申狚由路<br />
+        .about-image-top {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .about-image-top img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 3px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .about-image-top img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-image-top .image-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* 移陖右前的about-image型式*/
+        .about-image {
+            display: none;
+        }
+        
+        /* 告特图片字体采式/*/
+        .brand-font {
+            font-size: 0; /* 骗取原姖文字此炮）*/
+            width: 300px; /* 根微图片彻庎调整 */
+            height: 60px; /* 根微图片體度调整 */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
