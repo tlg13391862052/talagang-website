@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>苹屋特後探太都测王排品附有限公司 - 正定特後物㊂育</title>
+    <title>苏尼特左旗大都苏尼特肉食品有限公司 - 正宗苏尼特羊肉</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght$300;400;500;700&display=swap" rel="stylesheet">
-    <!--- -->
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+Qing+Ke+HuangYou&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 书法字体 - 类似刘炳森风格的字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <style>
+        /* 方形features布局样式 - 增强版 */
         .features {
             display: flex;
             flex-wrap: wrap;
@@ -17,6 +18,7 @@
             gap: 25px;
             margin: 40px 0;
         }
+        
         .features .feature {
             flex: 1;
             min-width: 240px;
@@ -25,16 +27,19 @@
             border-radius: 20px;
             padding: 30px 25px;
             text-align: center;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.1);
-            transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 2px solid transparent;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 260px;
             position: relative;
             overflow: hidden;
         }
+        
+        /* 添加微妙的背景渐变 */
         .features .feature::before {
             content: '';
             position: absolute;
@@ -46,12 +51,17 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
+        
         .features .feature:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 50px rgba(231, 76, 60, 0.15);
             border-color: #e74c3c;
         }
-        .features .feature:hover::before { opacity: 1; }
+        
+        .features .feature:hover::before {
+            opacity: 1;
+        }
+        
         .features .feature i {
             font-size: 3rem;
             color: #e74c3c;
@@ -59,23 +69,29 @@
             background: linear-gradient(135deg, #ffeaea, #fff5f5);
             width: 80px;
             height: 80px;
+            line-height: 80px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 20px;
             transition: all 0.3s ease;
         }
+        
         .features .feature:hover i {
             transform: scale(1.1);
             background: linear-gradient(135deg, #e74c3c, #f39c12);
             color: white;
             box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
         }
+        
         .features .feature h4 {
             font-size: 1.4rem;
             margin: 15px 0 10px;
             color: #2c3e50;
+            font-weight: 700;
+            line-height: 1.3;
         }
+        
         .features .feature p {
             font-size: 1rem;
             color: #666;
@@ -83,22 +99,1151 @@
             margin: 0;
             padding: 0 10px;
         }
+        
+        /* 确保四个项目等宽等高等间距 */
         @media (min-width: 1200px) {
-            .features .feature { flex: 0 0 calc(25% - 25px); max-width: calc(25% - 25px); }
+            .features .feature {
+                flex: 0 0 calc(25% - 25px);
+                max-width: calc(25% - 25px);
+            }
         }
-        @media (max-width: 768px) { .features .feature { flex: 0 0 100%; max-width: 100%; min-height: 200px; } }
-        @media (max-width: 992px) {
-            .features { gap: 20px; }
-            .features .feature { flex: 0 0 calc(50% - 20px); max-width: calc(50% - 20px); height: 240px; }
+        
+        @media (max-width: 1199px) and (min-width: 768px) {
+            .features {
+                gap: 20px;
+            }
+            .features .feature {
+                flex: 0 0 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+                height: 240px;
+            }
         }
-      </style>
-    <!-- More styles -->
-    <style>
-        .section { padding: 80px 0; }
-        .section-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        @media (max-width: 767px) {
+            .features {
+                gap: 15px;
+            }
+            .features .feature {
+                flex: 0 0 100%;
+                max-width: 100%;
+                height: auto;
+                min-height: 200px;
+            }
+        }
+        
+        /* 移除之前的features-row样式 */
+        .features-row {
+            display: none;
+        }
+        
+        /* logo样式 - 图片logo版本 */
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            height: 60px; /* 固定高度，与导航栏匹配 */
+        }
+        
+        .logo-img {
+            height: 50px; /* 图片高度 */
+            width: auto;  /* 宽度自适应 */
+            max-width: 200px; /* 最大宽度限制 */
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+        
+        /* 当前使用的文字logo样式（图片未找到时显示） */
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            background: linear-gradient(135deg, #fff5f5, #ffeaea);
+            border-radius: 10px;
+            border: 2px solid #e74c3c;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover .logo-placeholder {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(231, 76, 60, 0.3);
+            background: linear-gradient(135deg, #ffeaea, #ffd6d6);
+        }
+        
+        .logo-text {
+            color: #e74c3c !important;
+            font-weight: 800;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .logo:hover .logo-text {
+            color: #c0392b !important;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* 添加注册商标符号 */
+        .logo-text::after {
+            content: '®';
+            font-size: 1rem;
+            vertical-align: super;
+            margin-left: 3px;
+            color: #e74c3c;
+        }
+        
+        /* 当图片logo存在时，隐藏文字logo */
+        .logo:has(img) .logo-placeholder {
+            display: none;
+        }
+        
+        /* 产品描述样式优化 */
+        .product-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .product-info ul li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            line-height: 1.6;
+        }
+        
+        .product-info ul li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .product-info ul li strong {
+            color: #e74c3c;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .product-info ul li br {
+            display: block;
+            margin: 5px 0;
+            content: "";
+        }
+        
+        /* 门头照片上方布局 */
+        .about-image-top {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .about-image-top img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 3px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .about-image-top img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-image-top .image-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* 移除原来的about-image样式 */
+        .about-image {
+            display: none;
+        }
+        
+        /* 品牌图片字体样式 */
+        .brand-font {
+            font-size: 0; /* 隐藏原始文字 */
+            width: 300px; /* 根据图片宽度调整 */
+            height: 60px; /* 根据图片高度调整 */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+        
+        /* 阳坊大都涮羊肉字体图片 */
+        #yangfang-font {
+            background-image: url('images/yangfang-font.jpg');
+        }
+        
+        /* 龙泉居字体图片 */
+        #longquanju-font {
+            background-image: url('images/longquanju-font.jpg');
+        }
+        
+        /* 悬停效果 */
+        .brand-font:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+        
+        /* 图片加载失败时的备用样式 */
+        .brand-font:not([style*="background-image"]) {
+            font-size: 1.4rem;
+            font-family: 'Ma Shan Zheng', 'ZCOOL XiaoWei', 'ZCOOL QingKe HuangYou', cursive;
+            color: #8B4513;
+            padding: 5px 10px;
+            background: linear-gradient(to bottom, #FFF8DC, #F5F5DC);
+            border-left: 3px solid #8B4513;
+            width: auto;
+            height: auto;
+        }
     </style>
-</head>
+    <!-- D盘图片横幅CSS -->
+        <!-- 视频强制修复CSS -->
+    <style>
+        /* 确保视频完整显示 - 不裁剪任何部分 */
+        #sunitVideo, video {
+            width: 100% !important;
+            height: auto !important;
+            max-width: 100% !important;
+            object-fit: contain !important;
+            display: block !important;
+        }
+        
+        /* 修复视频容器 */
+        .video-container, [class*="video"] {
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow: visible !important;
+            margin: 0 auto !important;
+        }
+        
+        /* 视频修复确认 */
+        .video-full-fix {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 99998;
+            border: 3px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            font-size: 0.9rem;
+        }
+    </style>    <!-- 强制横幅背景CSS -->
+    <style>
+        /* 100%强制D盘图片横幅 - 最高优先级 */
+        #home.hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url("images/d-sunite-banner.jpg") center/cover no-repeat !important;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                              url("images/d-sunite-banner.jpg") !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            min-height: 600px !important;
+            height: 600px !important;
+            display: flex !important;
+            align-items: center !important;
+            position: relative !important;
+        }
+        
+        /* 覆盖所有可能的冲突 - 仅英雄区，不波及下方区域 */
+        body .hero, [class*="banner"] {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url("images/d-sunite-banner.jpg") center/cover no-repeat !important;
+        }
+        
+        /* 确保文字可读 */
+        #home h1, #home h2, #home h3,
+        #home p, #home span, #home div {
+            color: white !important;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.8) !important;
+        }
+        
+        /* 横幅修复确认 */
+        .banner-fixed-confirm {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 99999;
+            border: 3px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            font-size: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* 图片加载状态 */
+        .banner-status {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            z-index: 99998;
+        }
+    </style>    <!-- 精确横幅背景CSS - 只添加背景，不影响布局 -->
+    <style>
+        /* 精确选择器：只添加背景到横幅，不影响布局 */
+        #home.hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url("images/d-sunite-banner.jpg") center/cover no-repeat !important;
+        }
+        
+        /* 确保横幅文字可读 */
+        #home h1, #home h2, #home h3,
+        #home p, #home span, #home div {
+            color: white !important;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.7) !important;
+        }
+        
+        /* 布局恢复确认 */
+        .layout-restored {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 99999;
+            border: 3px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            font-size: 1rem;
+        }
+    </style></head>
 <body>
-    <h1>苹屋中无鍉鎏的欣定牙徚AZ�oyd>
-</body>
+    <!-- 冷冻分割羊肉 - 图片缩小样式 -->
+    <style>
+        .lengdong-gallery {
+            min-height: 280px !important;
+        }
+        .lengdong-gallery .gallery-slide {
+            height: 280px !important;
+        }
+        .lengdong-gallery .gallery-slide img {
+            max-width: 85% !important;
+            max-height: 90% !important;
+            width: auto !important;
+            height: auto !important;
+            margin: 0 auto;
+        }
+    </style>    <!-- 布局恢复确认 -->
+    <div class="layout-restored">
+        🏠 布局已恢复
+    </div>    <!-- 横幅背景修复确认 -->
+    <div class="banner-fixed-confirm">
+        🏔️ 横幅背景已修复
+    </div>
+    
+    <div class="banner-status" id="bannerStatus">
+        检查横幅图片...
+    </div>    <!-- D盘图片应用确认 -->
+        <!-- 视频完整显示修复确认 -->
+    <div class="video-full-fix">
+        🎬 视频完整显示已修复
+    </div>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <!-- 图片logo - 如果images/logo.png存在则显示 -->
+                <img src="images/logo.png" alt="塔拉贡" class="logo-img" onerror="this.style.display='none'; document.getElementById('text-logo').style.display='flex';">
+                
+                <!-- 文字logo - 图片加载失败时显示 -->
+                <div id="text-logo" class="logo-placeholder">
+                    <span class="logo-text">塔拉贡</span>
+                </div>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#products">产品中心</a></li>
+                <li><a href="#partners">合作伙伴</a></li>
+                <li><a href="#quality">品质保障</a></li>
+                <li><a href="塔拉贡品牌介绍.html" target="_blank">塔拉贡品牌</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+        <!-- 视频显示修复CSS -->
+    <style>
+        /* 视频容器修复 - 确保完整显示 */
+        .video-container {
+            position: relative !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+            overflow: hidden !important;
+            background: #000 !important;
+            border-radius: 10px !important;
+        }
+        
+        /* 视频标签修复 - 确保完整尺寸 */
+        .video-container video {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            max-width: 100% !important;
+            object-fit: contain !important;
+        }
+        
+        /* 16:9比例容器（备用方案） */
+        .video-ratio-container {
+            position: relative !important;
+            width: 100% !important;
+            padding-bottom: 56.25% !important; /* 16:9比例 */
+            height: 0 !important;
+            overflow: hidden !important;
+        }
+        
+        .video-ratio-container video {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+        }
+        
+        /* 视频修复确认提示 */
+        .video-fix-notice {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 99998;
+            border: 3px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            font-size: 0.9rem;
+        }
+        
+        /* 视频诊断信息 */
+        .video-diagnostic {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            z-index: 99997;
+            max-width: 300px;
+        }
+    </style></nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <h1 class="hero-title">源自锡林郭勒大草原的<br>正宗苏尼特羊肉</h1>
+                <p class="hero-subtitle">天然放养 · 品质卓越 · 健康美味</p>
+                <p class="hero-trademark">注册商标：<strong>塔拉贡</strong> ®</p>
+                <a href="#products" class="btn btn-primary">查看产品</a>
+                <a href="#contact" class="btn btn-secondary">联系我们</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="section core-advantages">
+        <div class="container">
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>天然草原放牧</h3>
+                    <p>苏尼特羊每日自然行走15-18公里，形成肉质紧实、脂肪含量低、风味浓郁的独特品质</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>三重零添加标准</h3>
+                    <p>严格执行零"科技"调理、零"科技"添加、零"科技"育肥品质标准，不使用任何化学添加，坚守天然本真风味</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>全程品质管控</h3>
+                    <p>从屠宰、分割、冷链到配送全流程品质管控，确保产品新鲜度与品质稳定性</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>行业标杆企业</h3>
+                    <p>业内公认的品质标杆企业，荣获多项国家级和自治区级荣誉认证</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            
+            <!-- 门头照片 - 移动到上方 -->
+            <div class="about-image-top">
+                <img src="images/company-front.jpg" alt="苏尼特左旗大都苏尼特肉食品有限公司门头">
+                <p class="image-caption">公司门头实景 - 苏尼特左旗满都拉图镇西环路肉食品加工园区</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>苏尼特左旗大都苏尼特肉食品有限公司</h3>
+                    <p class="company-highlight">成立于2012年，由北京知名品牌"阳坊大都"投资入驻，注册资金6000万元，坐落于内蒙古锡林郭勒盟苏尼特左旗满都拉图镇西环路肉食品加工园区，是集畜牧养殖、屠宰加工、冷链仓储、品牌销售于一体的现代化、规模化、标准化清真肉食品企业。</p>
+                    
+                    <div class="company-intro">
+                        <h4>企业实力</h4>
+                        <p>公司依托苏尼特左旗得天独厚的草原畜牧资源，引进国内先进生产加工技术与绿色环保节能工艺，建成达到国内先进水平的清真牛、羊自动化屠宰生产线，年加工能力可达20万只羊单位，年产牛、羊肉及副产品5000余吨，配套3000余吨专业低温冷藏设施，实现从屠宰、分割、冷链到配送全流程品质管控，确保产品新鲜度与品质稳定性。</p>
+                        
+                        <div class="intro-details">
+                            <div class="intro-item">
+                                <i class="fas fa-industry"></i>
+                                <div>
+                                    <h5>生产规模</h5>
+                                    <p>年加工能力20万只羊单位，年产牛、羊肉及副产品5000余吨</p>
+                                </div>
+                            </div>
+                            <div class="intro-item">
+                                <i class="fas fa-snowflake"></i>
+                                <div>
+                                    <h5>冷链仓储</h5>
+                                    <p>配套3000余吨专业低温冷藏设施，全流程冷链管控</p>
+                                </div>
+                            </div>
+                            <div class="intro-item">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <div>
+                                    <h5>原料来源</h5>
+                                    <p>羊源来自苏尼特羊核心产区——苏尼特左旗北部五个苏木</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="company-principles">
+                            <h5>核心理念与品质标准</h5>
+                            <p>企业坚守"源头把控、品质至上"的核心理念，所有羊、牛均甄选于苏尼特羊核心产区——苏尼特左旗洪格尔苏木、达来苏木等北部五个苏木，采用纯天然草原放牧模式。为获取充足食物，苏尼特羊每日需自然行走15—18公里，形成肉质紧实、脂肪含量低、风味浓郁的独特品质。</p>
+                            <p>公司严格执行零"科技"调理、零"科技"添加、零"科技"育肥品质标准，不使用保水剂、着色剂、粘合剂等任何化学添加，坚守天然本真风味。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="company-details">
+                        <div class="detail-item">
+                            <i class="fas fa-user-tie"></i>
+                            <div>
+                                <h4>法人代表</h4>
+                                <p>周竹旺</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <div>
+                                <h4>注册资金</h4>
+                                <p>6000万元</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-trademark"></i>
+                            <div>
+                                <h4>注册商标</h4>
+                                <p><strong>塔拉贡</strong> ®</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>原产地优势</h4>
+                            <p>地处苏尼特羊核心产区，确保原料纯正</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h4>草原生态</h4>
+                            <p>依托锡林郭勒大草原优质牧场资源</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <h4>品质保障</h4>
+                            <p>从牧场到餐桌的全链条质量管控</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <h4>冷链物流</h4>
+                            <p>完善的冷链仓储和物流配送体系</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 苏尼特羊视频展示 -->
+    <section id="video" class="section video-section">
+        <div class="container">
+            <h2 class="section-title">苏尼特羊 · 名羊天下</h2>
+            <p class="section-subtitle">草原生态放牧 · 天然品质保障 · 视频实景展示</p>
+            
+            <div class="video-wrapper">
+                <div class="video-container" style="display:flex; align-items:center; justify-content:center; background:#000; border-radius:15px; overflow:hidden;">
+                    <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid=BV15HofBaEGc&p=1&autoplay=0" 
+                            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+                            style="width:100%; max-width:900px; height:506px; border:none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品中心 -->
+    <section id="products" class="section products-section">
+        <div class="container">
+            <h2 class="section-title">产品中心</h2>
+            <p class="section-subtitle">精选优质苏尼特羊肉产品 · 注册商标：<strong>塔拉贡</strong> ®</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 冷冻分割羊肉轮播 -->
+                        <div class="product-gallery lengdong-gallery">
+                            <div class="gallery-slide active" style="display:flex; flex-direction:row; gap:10px; padding:10px;">
+                                <img src="images/product-lengdong1.png" alt="冷冻分割羊肉 - 羊肉卷" style="width:48% !important; height:auto !important; max-height:100% !important;">
+                                <img src="images/product-lengdong3.jpg" alt="冷冻分割羊肉 - 产品展示" style="width:48% !important; height:auto !important; max-height:100% !important;">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/product-lengdong2.png" alt="冷冻分割羊肉 - 羊排">
+                            </div>
+                            
+                            <!-- 轮播控制按钮 -->
+                            <button class="gallery-prev lengdong-prev" aria-label="上一张">‹</button>
+                            <button class="gallery-next lengdong-next" aria-label="下一张">›</button>
+                            
+                            <!-- 轮播指示点 -->
+                            <div class="gallery-dots lengdong-dots">
+                                <span class="dot active" data-slide="0"></span>
+                                <span class="dot" data-slide="1"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>冷冻分割羊肉</h3>
+                        <p class="product-desc">精选部位，精细分割，锁住草原原味</p>
+                        <ul>
+                            <li><strong>羊肉卷</strong><br>苏尼特羊肉卷薄切鲜嫩，铜锅涮食，入口即化</li>
+                            <li><strong>羊蝎子</strong><br>苏尼特羊蝎子骨香肉嫩，铜锅慢炖，滋补入味</li>
+                            <li><strong>羊排</strong><br>苏尼特羊排肥瘦相宜，烤香涮嫩，脂香满口</li>
+                            <li><strong>羊腿肉</strong><br>苏尼特羊腿细嫩紧实，清炖涮煮皆鲜，久煮不柴</li>
+                        </ul>
+                        <div class="product-spec">
+                            <span class="spec-item"><i class="fas fa-weight"></i> 规格：按需定制</span>
+                            <span class="spec-item"><i class="fas fa-snowflake"></i> 储存：-18℃以下</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 图片轮播容器 -->
+                        <div class="product-gallery">
+                            <!-- 原有礼盒图片 -->
+                            <div class="gallery-slide active">
+                                <img src="images/talagong-gift-box.jpg" alt="塔拉贡礼盒 - 苏尼特草原羊肉礼品装">
+                                <p class="image-caption">塔拉贡 ® 品牌专属礼盒 - 高端臻选・送礼佳品</p>
+                            </div>
+                            <!-- 新增小产品包装图片 -->
+                            <div class="gallery-slide">
+                                <img src="images/牛寸排.png" alt="牛寸排 - 精选牛肉部位">
+                                <p class="image-caption">牛寸排 - 精选牛肉部位，肉质鲜嫩</p>
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/羊寸排.png" alt="羊寸排 - 精选羊肉部位">
+                                <p class="image-caption">羊寸排 - 精选羊肉部位，肥瘦相宜</p>
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/羔羊前腱腿.png" alt="羔羊前腱腿 - 嫩滑羔羊肉">
+                                <p class="image-caption">羔羊前腱腿 - 嫩滑羔羊肉，口感细腻</p>
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/羔羊带骨前腿.png" alt="羔羊带骨前腿 - 带骨羔羊肉">
+                                <p class="image-caption">羔羊带骨前腿 - 带骨羔羊肉，骨香浓郁</p>
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/腱腿小切.png" alt="腱腿小切 - 精致切割">
+                                <p class="image-caption">腱腿小切 - 精致切割，方便烹饪</p>
+                            </div>
+                            
+                            <!-- 轮播控制按钮 -->
+                            <button class="gallery-prev" aria-label="上一张">‹</button>
+                            <button class="gallery-next" aria-label="下一张">›</button>
+                            
+                            <!-- 轮播指示点 -->
+                            <div class="gallery-dots">
+                                <span class="dot active" data-slide="0"></span>
+                                <span class="dot" data-slide="1"></span>
+                                <span class="dot" data-slide="2"></span>
+                                <span class="dot" data-slide="3"></span>
+                                <span class="dot" data-slide="4"></span>
+                                <span class="dot" data-slide="5"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>礼品装羊肉礼盒</h3>
+                        <p><strong>高端臻选・送礼佳品・塔拉贡 ® 品牌专属</strong></p>
+                        <ul>
+                            <li><strong>节日礼盒</strong><br>佳节定制，承情致礼</li>
+                            <li><strong>企业定制</strong><br>商务礼遇，格调之选</li>
+                            <li><strong>特产套装</strong><br>草原珍味，原生臻礼</li>
+                        </ul>
+                        <div class="product-spec">
+                            <span class="spec-item"><i class="fas fa-gift"></i> 品牌：塔拉贡 ®</span>
+                            <span class="spec-item"><i class="fas fa-box"></i> 包装：精美礼盒</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作伙伴 -->
+    <section id="partners" class="section partners-section">
+        <div class="container">
+            <h2 class="section-title">合作伙伴</h2>
+            <p class="section-subtitle">与国内知名餐饮企业建立长期战略合作</p>
+            
+            <div class="partners-content">
+                <div class="partner-category">
+                    <h3><i class="fas fa-utensils"></i> 核心合作品牌单位</h3>
+                    <div class="partner-list">
+                        <div class="partner-item brand-font" id="yangfang-font">北京阳坊大都涮羊肉</div>
+                        <div class="partner-item brand-font" id="longquanju-font">龙泉居羊蝎子</div>
+                    </div>
+                </div>
+                
+                <div class="partner-category">
+                    <h3><i class="fas fa-handshake"></i> 战略合作伙伴</h3>
+                    <div class="partner-list">
+                        <div class="partner-item">北京二商集团</div>
+                        <div class="partner-item">丰茂烤串</div>
+                        <div class="partner-item">唐宫餐饮</div>
+                        <div class="partner-item">金沙银贝</div>
+                        <div class="partner-item">京味张烤鸭店</div>
+                        <div class="partner-item">聚点烤串</div>
+                        <div class="partner-item">新辣道</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品质保障 -->
+    <section id="quality" class="section quality-section">
+        <div class="container">
+            <h2 class="section-title">品质保障体系</h2>
+            
+            <div class="quality-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>源头把控</h3>
+                    <p>与当地牧民合作社建立长期合作，确保羊源纯正，草原放养，自然生长。每只羊都有可追溯的养殖记录。</p>
+                    <div class="step-details">
+                        <span><i class="fas fa-check-circle"></i> 纯种苏尼特羊</span>
+                        <span><i class="fas fa-check-circle"></i> 草原自然放养</span>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>现代化加工</h3>
+                    <p>引进先进屠宰加工设备，严格执行卫生标准，全程可追溯</p>
+                    <div class="step-details">
+                        <span><i class="fas fa-check-circle"></i> 自动化屠宰生产线</span>
+                        <span><i class="fas fa-check-circle"></i> 清真认证标准</span>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>冷链物流</h3>
+                    <p>专业冷链仓储，全程温控运输，确保产品新鲜度</p>
+                    <div class="step-details">
+                        <span><i class="fas fa-check-circle"></i> 3000吨低温冷库</span>
+                        <span><i class="fas fa-check-circle"></i> 全程温控监控</span>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>质量检测</h3>
+                    <p>每批次产品都经过严格检测，符合国家食品安全标准</p>
+                    <div class="step-details">
+                        <span><i class="fas fa-check-circle"></i> 第三方权威检测</span>
+                        <span><i class="fas fa-check-circle"></i> 农残兽残零检出</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certifications">
+                <h3>质量体系与荣誉资质</h3>
+                <div class="quality-description">
+                    <p>在质量与体系建设方面，公司已通过ISO9001质量管理体系认证、HACCP危害分析与关键控制点体系认证，荣获苏尼特羊肉农产品地理标志授权、全国名特优新农产品认证，是业内公认的品质标杆企业。凭借绿色低碳、节能高效的生产模式，公司成功获评内蒙古自治区绿色工厂，并加入内蒙古自治区创新产业联盟，成为区域肉食品产业创新发展与绿色发展的示范企业。</p>
+                </div>
+                
+                <!-- 地理标志图片证书 - 突出显示但尺寸适中 -->
+                <div class="geographic-cert">
+                    <div class="cert with-image">
+                        <img src="images/geographical-indication-2024-2027.jpg" alt="苏尼特羊肉农产品地理标志公共标识 2024-2027">
+                        <div class="cert-text">
+                            <div>农产品地理标志授权</div>
+                            <div class="cert-validity">
+                                <i class="fas fa-calendar-check"></i> 有效期：2024-2027
+                            </div>
+                        </div>
+                    </div>
+                    <p class="cert-subtitle">核心认证 · 品质保证</p>
+                </div>
+                
+                <!-- 其他证书网格 -->
+                <div class="certs-section">
+                    <h4 class="certs-title">质量体系与行业荣誉</h4>
+                    <div class="certs-grid">
+                        <div class="cert">ISO9001质量管理体系</div>
+                        <div class="cert">HACCP体系认证</div>
+                        <div class="cert">全国名特优新农产品</div>
+                        <div class="cert">内蒙古自治区绿色工厂</div>
+                        <div class="cert">锡林郭勒盟重点龙头企业</div>
+                        <div class="cert">中国餐饮业金牌供应商</div>
+                        <div class="cert">中国好羊肉百强企业</div>
+                        <div class="cert">锡林郭勒盟诚信企业</div>
+                    </div>
+                </div>
+                
+                <div class="industry-position" style="text-align:left;">
+                    <h4>行业地位</h4>
+                    <p style="line-height:2.2; padding:0 10px;">
+                        <strong>🔹 锡林郭勒盟农牧业产业化重点龙头企业</strong><br>
+                        <strong>🔹 锡林郭勒盟总商会副会长单位</strong><br>
+                        <strong>🔹 锡林郭勒盟肉食品协会副会长单位</strong><br>
+                        <strong>🏆 中国餐饮业牛羊肉金牌供应商</strong><br>
+                        <strong>🏆 中国好羊肉百强企业</strong><br>
+                        <strong>🏆 锡林郭勒盟诚信企业</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>苏尼特左旗大都苏尼特肉食品有限公司</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>公司地址</h4>
+                            <p>内蒙古自治区锡林郭勒盟苏尼特左旗满都拉图镇西环路肉食品加工园区</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>联系电话</h4>
+                            <p>0479-2809066</p>
+                            <p style="margin-top: 5px; font-weight: 500;">13391862052</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>电子邮箱</h4>
+                            <p>464608008@qq.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>工作时间</h4>
+                            <p>9:00-17:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>在线咨询</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="联系电话" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="您的需求或留言" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交咨询</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="大都苏尼特">
+                    <p>源自草原，品质卓越</p>
+                    <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 5px;">注册商标：<strong>塔拉贡</strong> ®</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#products">产品中心</a></li>
+                        <li><a href="#quality">品质保障</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>关注我们</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                    <p>扫描二维码关注微信公众号</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 苏尼特左旗大都苏尼特肉食品有限公司 版权所有</p>
+                <p>蒙ICP备XXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Logo图片加载检查
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoImg = document.querySelector('.logo-img');
+            const textLogo = document.getElementById('text-logo');
+            
+            // 如果图片加载失败，显示文字logo
+            if (logoImg) {
+                logoImg.onerror = function() {
+                    this.style.display = 'none';
+                    if (textLogo) {
+                        textLogo.style.display = 'flex';
+                    }
+                };
+                
+                // 检查图片是否实际存在
+                const imgTest = new Image();
+                imgTest.src = logoImg.src;
+                imgTest.onerror = function() {
+                    logoImg.style.display = 'none';
+                    if (textLogo) {
+                        textLogo.style.display = 'flex';
+                    }
+                };
+            }
+            
+            // 初始状态：如果图片存在则隐藏文字logo
+            if (logoImg && textLogo) {
+                textLogo.style.display = 'none';
+            }
+        });
+    </script>
+    <script>
+        // 视频诊断和修复
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+            const diagnostic = document.getElementById('videoDiagnostic');
+            
+            if (videos.length > 0) {
+                videos.forEach((video, index) => {
+                    // 等待视频元数据加载
+                    video.addEventListener('loadedmetadata', function() {
+                        const info = `
+                            视频 ${index + 1}:<br>
+                            原始尺寸: ${video.videoWidth}×${video.videoHeight}<br>
+                            显示尺寸: ${video.clientWidth}×${video.clientHeight}<br>
+                            比例: ${(video.videoWidth/video.videoHeight).toFixed(2)}:1
+                        `;
+                        
+                        diagnostic.innerHTML = info;
+                        
+                        // 检查是否被裁剪
+                        if (video.clientWidth < video.videoWidth * 0.9) {
+                            diagnostic.innerHTML += '<br>⚠️ 可能被裁剪';
+                            
+                            // 自动修复：确保完整显示
+                            video.style.width = '100%';
+                            video.style.height = 'auto';
+                            video.style.objectFit = 'contain';
+                            
+                            // 找到父容器
+                            let container = video.parentElement;
+                            while (container && !container.classList.contains('video-container')) {
+                                container = container.parentElement;
+                            }
+                            
+                            if (container) {
+                                container.style.overflow = 'visible';
+                                container.style.maxWidth = '100%';
+                            }
+                        }
+                    });
+                    
+                    // 错误处理
+                    video.addEventListener('error', function() {
+                        diagnostic.innerHTML = '❌ 视频加载失败';
+                    });
+                });
+                
+                console.log('视频诊断已启动');
+            } else {
+                diagnostic.innerHTML = '未找到视频元素';
+            }
+        });
+        
+        // 手动修复函数
+        function fixVideoDisplay() {
+            const videos = document.querySelectorAll('video');
+            videos.forEach(video => {
+                // 强制完整显示
+                video.style.width = '100%';
+                video.style.height = 'auto';
+                video.style.maxWidth = '100%';
+                video.style.objectFit = 'contain';
+                video.style.display = 'block';
+                
+                // 移除可能限制宽度的样式
+                video.style.maxHeight = '';
+                video.style.minWidth = '';
+                
+                console.log('视频显示已强制修复:', video.src);
+            });
+            
+            alert('视频显示已强制修复！');
+        }
+    </script>    <script>
+        // 检查横幅图片加载
+        document.addEventListener('DOMContentLoaded', function() {
+            const bannerStatus = document.getElementById('bannerStatus');
+            const heroSection = document.getElementById('home');
+            
+            if (!heroSection) {
+                bannerStatus.innerHTML = '❌ 未找到横幅区域';
+                bannerStatus.style.background = 'rgba(231, 76, 60, 0.9)';
+                return;
+            }
+            
+            // 测试图片加载
+            const testImg = new Image();
+            testImg.src = 'images/d-sunite-banner.jpg';
+            
+            testImg.onload = function() {
+                bannerStatus.innerHTML = `
+                    ✅ 横幅图片加载成功<br>
+                    尺寸: ${testImg.width}×${testImg.height}像素<br>
+                    文件: d-sunite-banner.jpg
+                `;
+                bannerStatus.style.background = 'rgba(39, 174, 96, 0.9)';
+                
+                // 强制应用背景
+                heroSection.style.background = `
+                    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url("images/d-sunite-banner.jpg") center/cover no-repeat
+                `;
+                
+                console.log('横幅图片加载成功:', {
+                    width: testImg.width,
+                    height: testImg.height,
+                    src: testImg.src
+                });
+            };
+            
+            testImg.onerror = function() {
+                bannerStatus.innerHTML = `
+                    ❌ 横幅图片加载失败<br>
+                    文件: images/d-sunite-banner.jpg
+                `;
+                bannerStatus.style.background = 'rgba(231, 76, 60, 0.9)';
+                
+                // 使用备用背景
+                heroSection.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                
+                console.error('横幅图片加载失败');
+            };
+        });
+        
+        // 手动修复函数
+        function forceBannerBackground() {
+            const heroSection = document.getElementById('home');
+            if (heroSection) {
+                heroSection.style.background = `
+                    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url("images/d-sunite-banner.jpg") center/cover no-repeat
+                `;
+                heroSection.style.backgroundImage = `
+                    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url("images/d-sunite-banner.jpg")
+                `;
+                alert('横幅背景已强制应用！');
+            } else {
+                alert('未找到横幅区域');
+            }
+        }
+    </script></body>
 </html>
+
+
+
+
